@@ -1,0 +1,369 @@
+
+.card-detail{
+  height: 450px;
+  box-shadow: 0px 10px 10px black;
+  width: 60%;
+}
+.card-detail2{
+  margin-top:  1rem !important;
+  box-shadow: 0px 10px 10px black;
+}
+.titulo-portada{
+
+  margin-top: 4px;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.dropdown-menu{
+  background-color: #212529 !important;
+}
+.linkeado{
+  display: flex;
+  width: 100%;
+  color:white;
+  
+}
+.marginL{
+  margin-left: 1rem;
+
+}
+.marginR{
+  margin-right: 1rem;
+}
+.linkeado:hover {color:#5e3465;}
+.personajes-principal{
+  margin:auto;
+  text-align: center;
+  align-items: center;
+}
+.tituloBatalla{
+  text-align: center;
+  margin: 2rem;
+}
+.batalla5{
+  color:white;
+}
+.border-success {
+  border-color: #9f35ac!important;
+}
+.iconos{
+  font-size:larger !important;
+  font-weight: bold !important;
+}
+.personaje-titulo{
+  color:#5e3465;
+}
+.personajeTexto{
+  color: black !important;
+}
+.imageRick{
+  margin: auto;
+}
+.addButton{
+  margin:2px !important;
+  width: 98% !important;
+}
+.cart-item{
+  width: 70% !important;
+  margin:auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  align-items: center;
+}
+.deleteButton{
+    margin-bottom: 2px;
+  }
+  .play-items{
+   
+    width: 60%;
+  }
+  .play-card{
+    height: 200px;
+    box-shadow: 0px 10px 10px black;
+    width: 100%;
+    
+  }
+  .play-total{
+    display: flex;
+  }
+  .play-items2{
+    width: 30%;
+  }
+  h2{
+    font-size: 40px !important;
+  }
+  .vs{
+    text-align: center;
+    width: 5%;
+    align-items: center;
+    margin: auto;
+  }
+  .centrado{
+    text-align: center;
+  }
+  .centradoTuto{
+    text-align: center;
+    margin: 2rem;
+  }
+  .boton-jugar{
+    
+    margin:2rem;
+    text-align: center;
+    
+  }
+  .display-flex{
+    display: flex;
+  }
+  .poderJuego{
+      text-align: center;
+      margin-top: 4rem;
+
+  }
+  .dalePlay{
+    margin-top: 1rem !important;
+  }
+
+  .botonSeleccionado{
+    background-color: black !important;
+  }
+  .cardNoSeleccionada{
+    opacity: 50%;
+    cursor: pointer;
+  }
+  .falta1{
+    color:orangered
+  }
+  .completo{
+    color: green;
+  }
+  .volver{
+    text-align: center;
+    margin: 2rem;
+  }
+  @media (min-width: 601px)and (max-width:1600px){
+    .card-detail {
+      width: 80% ;
+    }
+  }
+  @media (min-width: 1200px){
+    .play-card {
+      height: 500px;
+      width: 70%;
+    }
+      body{
+        height: 950px !important;
+      }
+    
+  }
+  @media (min-width: 601px)and (max-width:1199px){
+    .play-card {
+      height: 350px;
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 1200px){
+    .letra-chica{
+      font-size: 12px !important;
+    }
+    .botonSeleccionado{
+    
+      font-size: 12px !important;
+   
+    }
+    .volver{
+          
+      font-size: 12px !important;
+
+    }
+    .dalePlay{
+      font-size: 12px !important;
+    }
+    body{
+      height: 800px;
+    }
+  }
+.marginT{
+  margin-bottom: 3rem;
+}
+.bg-dark{
+  
+  background-color: #070808!important ;
+  
+}
+.marginB{
+  margin-bottom: 4rem;
+  
+}
+  .site-footer
+{
+  background-color:#3d2640;
+  
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+
+padding-top:18rem;
+padding-bottom:18rem;
+padding-right: 4rem;
+padding-left: 4rem;  
+width: 100%;
+
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{color:white;
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
