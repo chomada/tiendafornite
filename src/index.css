@@ -52,6 +52,9 @@ code {
   font-size:larger !important;
   font-weight: bold !important;
 }
+.imgFooter{
+  height: 50%;
+}
 .personaje-titulo{
   color:#5e3465;
 }
