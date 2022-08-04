@@ -1,6 +1,5 @@
 import './App.css';
 import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import ComoComprar from './components/ComoComprar';
 import Header from './components/Header';
@@ -17,7 +16,6 @@ function App() {
       <Routes>
       <Route path="/" element={<Header />}/>
       <Route path = '/productos' element = {<ItemListContainer/>} />
-      <Route path="/item/:id" element={<ItemDetailContainer />}/>
       <Route path="/comocomprar" element={<ComoComprar/>}/>
     
       <Route path = '*' element = {<Header/>} />
