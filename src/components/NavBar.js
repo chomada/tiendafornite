@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 import '../index.css'
 import { IconButton } from '@chakra-ui/react'
@@ -18,19 +18,19 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
 
-          <Link  className="linkeado marginR" to="/productos" >Productos</Link>
-           
-          
-     
-          </Nav>
-          
-         
-          
-          <Nav>
-            <Link  className="linkeado marginR" to="/comocomprar" >Como comprar?</Link>
+            <Link className="linkeado marginR" to="/productos" >Productos</Link>
+
+
 
           </Nav>
-         
+
+
+
+          <Nav>
+            <Link className="linkeado marginR" to="/comocomprar" >Como comprar?</Link>
+
+          </Nav>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>

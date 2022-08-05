@@ -1,22 +1,22 @@
 import React from 'react'
 import Item from './Item';
 import '../index.css';
-import {Row } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 const ItemList = ({ products }) => {
-  
+
 
   return (
     <Row xs={1} sm={2} md={4} className="g-4 personajes-principal" >
-    {products.map(prod => {
-          return <Item
+      {products.map(prod => {
+        return <Item
           key={prod.id}
-            products={prod}
-             />
-        })}
-  </Row>
-      
-    
+          products={prod}
+        />
+      })}
+    </Row>
+
+
   )
 }
 
