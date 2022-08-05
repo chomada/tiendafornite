@@ -15,8 +15,9 @@ const Footer = () => {
 
             <p className="copyright-text centrado"> <a className="copyright-text centrado " href='https://www.instagram.com/tiendafornite.arg' rel='noreferrer' target="_blank"> <img
 
-              alt="" src={Logo} /> Instagram</a>Ponete en contacto con nosotros | This website is made by blabla
+              alt="" src={Logo} /> Instagram</a>Ponete en contacto con nosotros | This website is made by blabl
             </p>
+            <p>hola</p>
           </div>
 
 
