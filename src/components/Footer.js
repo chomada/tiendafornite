@@ -17,7 +17,7 @@ const Footer = () => {
 
               alt="" src={Logo} /> Instagram</a>Ponete en contacto con nosotros | This website is made by blabl
             </p>
-            <p>hola</p>
+          
           </div>
 
 
