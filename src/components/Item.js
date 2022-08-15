@@ -2,11 +2,19 @@ import React from 'react'
 import { Card, Col, ListGroup, ListGroupItem } from 'react-bootstrap';
 //import { useNavigate } from 'react-router-dom';
 import { Button } from '@chakra-ui/react'
+import { alertConfirmationSuccess } from '../alerts/alerts';
+import { useNavigate } from 'react-router-dom';
 
 import '../index.css'
 const Item = ({ products }) => {
 
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
+
+    const handlePurchase = ()=>{
+        navigate('/productos/metodo-pago')
+        alertConfirmationSuccess()
+    }
+
 
     return (
 
@@ -21,7 +29,7 @@ const Item = ({ products }) => {
 
 
                     </ListGroup>
-                    <Button colorScheme='purple' className="addButton" >Comprar</Button>
+                    <Button colorScheme='purple' className="addButton" onClick={()=> handlePurchase()}>Comprar</Button>
 
                 </Card.Body>
 
