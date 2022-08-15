@@ -30,7 +30,7 @@ const NavBar = () => {
 
           <Nav>
             <Link className="linkeado marginR" to="/comocomprar">
-              Como comprar?
+              Cómo comprar?
             </Link>
           </Nav>
         </Navbar.Collapse>
