@@ -5,6 +5,6 @@ export const alertConfirmationSuccess = ()=>{
   Swal.fire({
     title: 'Compra exitosa',
     icon: 'success',
-    timer: 2000
+    // timer: 2000
   })
 }
