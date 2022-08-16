@@ -1,19 +1,9 @@
-import React, { createContext } from 'react'
+import React, { createContext } from "react";
 
-export const Team = createContext()
+export const Team = createContext();
 
-const TeamProvider = ({children}) => {
-  
+const TeamProvider = ({ children }) => {
+  return <Team.Provider value={{}}>{children}</Team.Provider>;
+};
 
-
-  return (
-    <Team.Provider value={{
-      
-      
-    }}>
-      {children}
-    </Team.Provider>
-  )
-}
-
-export default TeamProvider
+export default TeamProvider;
