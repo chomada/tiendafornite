@@ -14,26 +14,35 @@ const Item = ({ products }) => {
     alertConfirmationSuccess();
   };
 
+
   return (
     <Col>
       <Card border="success" className="personajes-principal card-detail">
-        <Card.Img variant="top" src={products.imagen} />
+        <Card.Img variant="top" src="https://res.cloudinary.com/chomada/image/upload/v1660619263/4_szqp8p.png" />
+      
+
+      
         <Card.Body>
-          <Card.Title className="personaje-titulo">
+        <Card.Title className="personaje-titulo">
             {products.nombre}
           </Card.Title>
-          <ListGroup className="list-group-flush">
-            <ListGroupItem>Descripcion</ListGroupItem>
-            <ListGroupItem>Precio en pesos: ${products.precio}</ListGroupItem>
+        <ListGroup  className="list-group-flush listGroup">
+            <ListGroupItem className="listItem">{products.descripcion}</ListGroupItem>
+          
+            <ListGroupItem ><p className="negrita">Precio en pesos: ${products.precio}</p></ListGroupItem>
           </ListGroup>
-          <Button
+        
+          <Button 
             colorScheme="purple"
             className="addButton"
             onClick={() => handlePurchase()}
           >
             Comprar
           </Button>
+       
         </Card.Body>
+       
+        
       </Card>
     </Col>
   );

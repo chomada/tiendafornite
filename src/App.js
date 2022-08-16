@@ -6,11 +6,13 @@ import Header from "./components/Header";
 
 import Footer from "./components/Footer";
 import { PaymentMethods } from "./components/PaymentMethods";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+        <NavBar/>
         <Routes>
           <Route path="/" element={<Header />} />
           <Route path="/productos" element={<ItemListContainer />} />

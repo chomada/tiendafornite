@@ -6,7 +6,7 @@ export const PaymentMethods = () => {
 
   return (
     <>
-      <NavBar />
+      
       <div className="container">
         <div className="row">
           <div className="col-12">
