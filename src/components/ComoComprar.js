@@ -5,7 +5,7 @@ const ComoComprar = () => {
   document.body.style = 'background: linear-gradient(black, #26272b 40%, #26272b) !important';
   return (
     <>
-      <NavBar />
+      
       <div className="centradoTuto batalla5">
         <h2 className="centradoTuto">Importante!</h2>
         <p>1- Agregar como amigo en Fornite al usuario "DadorDeRegalos" (Es imprescindible este paso para poder continuar).</p>

@@ -42,7 +42,7 @@ const ItemListContainer = () => {
 
     return (
         <>
-            <NavBar />
+            
             <ItemList
                 products={products}
 
