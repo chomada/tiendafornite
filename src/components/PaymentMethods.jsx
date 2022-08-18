@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router-dom";
-import NavBar from "./NavBar";
 
 export const PaymentMethods = () => {
   const navigate = useNavigate();
