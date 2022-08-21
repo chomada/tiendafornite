@@ -22,10 +22,9 @@ const Item = ({ products }) => {
       allowEscapeKey: false,
     }).then((result) => {
       if (result.isConfirmed) {
-        console.log("click");
         navigate("/productos/metodo-pago");
       } else if (result.isDismissed) {
-        navigate("/comocomprar");
+        navigate("/como-comprar");
       }
     });
   };
