@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from './NavBar';
 import logo from '../assets/fornite.gif'
 
 const Header = () => {

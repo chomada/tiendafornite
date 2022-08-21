@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from './NavBar'
 
 const ComoComprar = () => {
   document.body.style = 'background: linear-gradient(black, #26272b 40%, #26272b) !important';

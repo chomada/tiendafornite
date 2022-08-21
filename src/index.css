@@ -227,7 +227,7 @@ footer{
 
 .contenedor-redes{
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 .redes{
