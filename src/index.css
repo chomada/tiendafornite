@@ -6,7 +6,7 @@ body {
 }
 
 .card-detail {
-  height: 600px;
+  height: 575px;
   box-shadow: 0px 10px 10px black;
   width: 95%;
 }
@@ -204,7 +204,7 @@ h2 {
 
 
 /* ----- FOOTER ----- */
-footer{
+.footerGral{
   background-color:#352138;
   width: 100%;
   position: absolute;

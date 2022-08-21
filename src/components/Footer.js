@@ -9,7 +9,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footerGral">
       <Container fluid>
         <Row>
           <Col>
