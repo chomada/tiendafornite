@@ -8,7 +8,7 @@ export const TransferenciaBancaria = () => {
   const [modal, setModal] = useState(false);
 
   return (
-    <div className="container w-50">
+    <div className="negrita container w-50">
       <h1>Transferencia Bancaria</h1>
       <div className="row">
         <div className="col-12">
