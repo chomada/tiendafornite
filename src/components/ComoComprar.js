@@ -38,7 +38,7 @@ const ComoComprar = () => {
 
         <button
           className="btn btn-primary text-center mt-5"
-          onClick={() => navigate("/productos")}
+          onClick={() => navigate(-1)}
         >
           Volver
         </button>

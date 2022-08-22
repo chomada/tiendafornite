@@ -37,7 +37,7 @@ export const PaymentMethods = () => {
           <div className="col-12 text-center mt-5">
             <button
               className="btn btn-primary w-25 text-center"
-              onClick={() => navigate("/productos")}
+              onClick={() => navigate(-1)}
             >
               Volver
             </button>
