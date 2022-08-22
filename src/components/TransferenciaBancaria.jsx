@@ -1,8 +1,8 @@
 import { useState } from "react";
 import ModalCompra from "./ModalCompra";
-import { Toaster } from "react-hot-toast";
+import { Toaster, toast } from "react-hot-toast";
 import { CopyClipboard } from "./CopyClipboard";
-import { CopyClipboardCheck } from "./CopyClipboardCheck";
+import { RiClipboardLine } from "react-icons/ri";
 
 export const TransferenciaBancaria = () => {
   const [modal, setModal] = useState(false);
@@ -20,11 +20,11 @@ export const TransferenciaBancaria = () => {
                 <b>Mi CBU:</b> <span>11111111111111111111111111</span>
               </div>
               <div>
-                <CopyClipboard
-                  value="11111111111111111111111111"
-                  className="text-end"
-                >
-                  <CopyClipboardCheck />
+                <CopyClipboard value="11111111111111111111111111">
+                  <RiClipboardLine
+                    onClick={() => toast.success("copiado al portapapeles")}
+                    className="pointer"
+                  />
                 </CopyClipboard>
               </div>
             </div>
@@ -33,11 +33,11 @@ export const TransferenciaBancaria = () => {
                 <b>Alias:</b> <span>goku.vegeta.broly</span>
               </div>
               <div>
-                <CopyClipboard
-                  value="goku.vegeta.broly"
-                  className="text-end"
-                >
-                  <CopyClipboardCheck />
+                <CopyClipboard value="goku.vegeta.broly">
+                  <RiClipboardLine
+                    onClick={() => toast.success("copiado al portapapeles")}
+                    className="pointer"
+                  />
                 </CopyClipboard>
               </div>
             </div>
@@ -46,11 +46,11 @@ export const TransferenciaBancaria = () => {
                 <b>Cuit:</b> <span>20-20528695-1</span>
               </div>
               <div>
-                <CopyClipboard
-                  value="20-20528695-1"
-                  className="text-end"
-                >
-                  <CopyClipboardCheck />
+                <CopyClipboard value="20-20528695-1">
+                  <RiClipboardLine
+                    onClick={() => toast.success("copiado al portapapeles")}
+                    className="pointer"
+                  />
                 </CopyClipboard>
               </div>
             </div>
@@ -59,15 +59,14 @@ export const TransferenciaBancaria = () => {
                 <b>Número de cuenta:</b> <span>1010101010</span>
               </div>
               <div>
-                <CopyClipboard
-                  value="aaa"
-                  className="text-end"
-                >
-                  <CopyClipboardCheck />
+                <CopyClipboard value="1010101010">
+                  <RiClipboardLine
+                    onClick={() => toast.success("copiado al portapapeles")}
+                    className="pointer"
+                  />
                 </CopyClipboard>
               </div>
             </div>
-            
           </div>
 
           <Toaster />
