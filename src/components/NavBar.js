@@ -29,7 +29,7 @@ const NavBar = () => {
           </Nav>
 
           <Nav>
-            <Link className="linkeado marginR" to="/comocomprar">
+            <Link className="linkeado marginR" to="/como-comprar">
               Cómo comprar?
             </Link>
           </Nav>

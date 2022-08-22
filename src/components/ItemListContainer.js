@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 import { db } from '../firebase/config';
 import { collection, getDocs, query } from "firebase/firestore";
-import NavBar from './NavBar';
 
 
 

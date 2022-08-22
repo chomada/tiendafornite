@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaGitlab } from "react-icons/fa";
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { Link } from "react-router-dom";
+
 
 
 
@@ -18,13 +18,13 @@ const Footer = () => {
            </div>
           </Col>
         </Row>
-        <Row>
+        <Row className='py-3'>
           <Col className='contenedor-redes'>
             <div className='redes'>
               <div>
-                <p>Seguinos en</p>
+                
                 <div className='instagram'>
-                  <a href='https://www.instagram.com/tiendafornite.arg' target='_blank'>
+                  <a href='https://www.instagram.com/tiendafornite.arg' target='_blank' rel="noreferrer">
                     <InstagramIcon />
                   </a>
                 </div>

@@ -11,6 +11,10 @@ body {
   width: 95%;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .size-title{
   font-size: 25px;
 }
@@ -227,7 +231,7 @@ h2 {
 
 .contenedor-redes{
   display: flex;
-  justify-content: left;
+  justify-content: center;
 }
 
 .redes{
