@@ -11,12 +11,12 @@ const Item = ({ products }) => {
   const handlePurchase = () => {
     Swal.fire({
       title: "Importante",
-      text: "¿ya pasaron 48 hs desde que nos agregó en el juego?",
+      text: "¿Ya pasaron 48 hs desde que nos agregó en el juego?",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Sí!",
+      confirmButtonText: "Sí",
       cancelButtonText: "No",
       allowOutsideClick: false,
       allowEscapeKey: false,
@@ -38,10 +38,10 @@ const Item = ({ products }) => {
         />
 
         <Card.Body>
-          <Card.Title className="personaje-titulo">
+          <Card.Title className="personaje-titulo negrita">
             {products.nombre}
           </Card.Title>
-          <ListGroup className="list-group-flush listGroup">
+          <ListGroup className="list-group-flush listGroup negrita">
             <ListGroupItem className="listItem">
               {products.descripcion}
             </ListGroupItem>
