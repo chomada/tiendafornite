@@ -9,7 +9,7 @@ export const TransferenciaBancaria = () => {
 
   return (
     <div className="container w-50">
-      <h1>Transferencia Bancaria</h1>
+      <h1>Datos de la cuenta</h1>
       <div className="row">
         <div className="col-12">
           <hr />

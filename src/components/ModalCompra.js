@@ -40,8 +40,8 @@ const ModalCompra = ({ modal, setModal }) => {
           <ModalBody>
             <Text>
               Envianos el comprobante de pago por Instagram, recordándonos tu
-              usuario en el juego y el producto de la tienda que elegiste, al
-              instante vas a estar recibiendolo como regalo!
+              usuario en el juego y el producto de la tienda que elegiste. Al
+              instante vas a estar recibiéndolo como regalo!
             </Text>
           </ModalBody>
           <ModalFooter>
