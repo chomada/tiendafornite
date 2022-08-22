@@ -260,3 +260,7 @@ h2 {
   align-items: center;
   font-size: 12px;
 }
+.btn-primary{
+  background-color: purple !important;
+  border-color:rgb(255, 0, 255) !important;
+}
