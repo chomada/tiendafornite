@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import "../index.css";
 const Item = ({ products }) => {
   const navigate = useNavigate();
-
+//prueba
   const handlePurchase = () => {
     navigate("/productos/metodo-pago");
     alertConfirmationSuccess();
