@@ -23,7 +23,7 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link className="linkeado marginR" to="/productos">
+            <Link className="linkeado marginR pb-2 pb-lg-0" to="/productos">
               Productos
             </Link>
           </Nav>
