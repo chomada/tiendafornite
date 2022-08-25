@@ -15,7 +15,7 @@ export const PaymentMethods = () => {
         <div className="row">
           <div className="col-12">
             <div className="d-flex justify-content-center flex-column align-items-center mb-4">
-              <h1 className="fw-bold mb-2 size-title">Métodos de Pago</h1>
+              <h2 className="contenedor-metodosPagos">Métodos de Pago</h2>
             </div>
           </div>
          
@@ -36,10 +36,10 @@ export const PaymentMethods = () => {
           </div>
           <div className="col-12 text-center mt-5">
             <button
-              className="btn btn-primary w-25 text-center"
-              onClick={() => navigate(-1)}
+            className="btn btn-primary text-center mt-5"
+            onClick={() => navigate(-1)}
             >
-              Volver
+            Volver
             </button>
           </div>
         </div>
