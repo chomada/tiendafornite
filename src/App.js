@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import { PaymentMethods } from "./components/PaymentMethods";
 import NavBar from "./components/NavBar";
 import { TransferenciaBancaria } from "./components/TransferenciaBancaria";
+import Home from "./components/pages/Home";
 
 function App() {
   return (
@@ -15,13 +16,13 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <Routes>
-          <Route path="/" element={<Header />} />
+          <Route path="/" element={<Home />} />
           <Route path="/productos" element={<ItemListContainer />} />
           <Route path="/productos/metodo-pago" element={<PaymentMethods />} />
           <Route path="/como-comprar" element={<ComoComprar />} />
           <Route path="/transferencia-bancaria" element={<TransferenciaBancaria />} />
 
-          <Route path="*" element={<Header />} />
+          <Route path="*" element={<Home />} />
           
         </Routes>
         <Footer />

@@ -3,6 +3,7 @@ body {
   position: relative;
   min-height: 100vh !important;
   padding-bottom: 200px;
+  background: linear-gradient(black, #472c4a 60%, #472c4a) !important
 }
 
 .card-detail {
@@ -51,13 +52,8 @@ code {
   text-align: center;
   align-items: center;
 }
-.tituloBatalla {
-  text-align: center;
-  margin: 2rem;
-}
-.batalla5 {
-  color: white;
-}
+
+
 .border-success {
   border-color: #9f35ac !important;
 }
@@ -104,18 +100,14 @@ code {
 .play-items2 {
   width: 30%;
 }
-h2 {
-  font-size: 40px !important;
-}
+
 .vs {
   text-align: center;
   width: 5%;
   align-items: center;
   margin: auto;
 }
-.centrado {
-  text-align: center;
-}
+
 .centradoTuto {
   text-align: center;
   margin: 2rem;
@@ -207,6 +199,73 @@ h2 {
 
 
 
+/* ----------------------------------------------- */
+
+
+h2 {
+  font-size: 32px !important;
+}
+.bg-dark {
+  background-color: #070808 !important ;
+}
+
+
+
+/* ----- HEADER ----- */
+.titulo-principal{
+  margin: 2rem;
+  color: white;
+}
+
+/* ----- PRODUCTOS ----- */
+.contenedor-productos{
+  margin-top: 30px;
+  color: white;
+  font-weight: 800;
+}
+.contenedor-gesto{
+  height: 300px;
+  background-color: #352138;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+.titulo-gesto{
+  color: white;
+  font-weight: 800;
+  font-size: 18px !important;
+  padding: 10px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* ----- PARALLAX ----- */
+.parallax {
+  background-image: url(/src/assets/carousel/fortnite3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 20em;
+  margin-top: 30px; 
+}
+
+/* ----- COMO COMPRAR ----- */
+.contenedor-comoComprar{
+  margin-top: 30px;
+  color: white;
+  font-weight: 800;
+}
+.contenedor-importante{
+  margin-top: 20px;
+  color: white;
+  border-radius: 6px;
+  padding: 15px;
+}
+.contenedor-importante h2{
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
 /* ----- FOOTER ----- */
 .footerGral{
   background-color:#352138;
@@ -216,42 +275,34 @@ h2 {
   padding-top: 15px;
   color: white;
 }
-
 .footer-logo{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
 }
-
 .logo-titulo{
   margin-left: 10px;
   font-size: 18px;
 }
-
 .contenedor-redes{
   display: flex;
   justify-content: center;
 }
-
 .redes{
   margin-bottom: 8px;
 }
-
 .instagram a{
   text-decoration: none !important;
 }
-
 .instagram a:hover{
   color: #070808;
 }
-
 .instagram{
   display: flex;
   justify-content: center;
   margin-top: 2px;
 }
-
 .copyright{
   margin-top: 2px;
   margin-bottom: 2px;
@@ -260,6 +311,27 @@ h2 {
   align-items: center;
   font-size: 12px;
 }
+
+
+/* ----- METODOS DE PAGOS ----- */
+.contenedor-metodosPagos{
+  margin-top: 30px;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.contenedor-pago{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 6px;
+}
+
+
+
+
+
+
+
 .btn-primary{
   background-color: purple !important;
   border-color:rgb(255, 0, 255) !important;
