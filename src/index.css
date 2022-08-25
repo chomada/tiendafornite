@@ -312,7 +312,6 @@ h2 {
   font-size: 12px;
 }
 
-
 /* ----- METODOS DE PAGOS ----- */
 .contenedor-metodosPagos{
   margin-top: 30px;
@@ -320,12 +319,6 @@ h2 {
   font-weight: 800;
   margin-bottom: 20px;
 }
-.contenedor-pago{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 6px;
-}
-
 
 
 
