@@ -6,11 +6,11 @@ import ItemListContainer from "../ItemListContainer"
 const Home = () => {
     return(
         <>
-            <Header/>
+            <Header />
             <Container>
                 <Row>
                     <Col className="contenedor-productos">
-                        <h2>Productos</h2> 
+                        <h2 id="productos">Productos</h2> 
                     </Col>
                 </Row>
                 <Row>

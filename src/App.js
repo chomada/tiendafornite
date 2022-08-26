@@ -2,7 +2,7 @@
 import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ComoComprar from "./components/ComoComprar";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 
 import Footer from "./components/Footer";
 import { PaymentMethods } from "./components/PaymentMethods";
