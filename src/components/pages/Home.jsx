@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import ComoComprar from "../ComoComprar";
 import Header from "../Header";
+import ItemListContainer from "../ItemListContainer"
 
 const Home = () => {
     return(
@@ -18,11 +19,9 @@ const Home = () => {
                             <div className="titulo-gesto bg-dark">
                                 <h3>Gestos</h3>
                             </div>
-                            <div>
-
-
+                            <div className="contenedor-cards">
+                                <ItemListContainer/>
                             </div>
-
                         </div>
                     </Col>
                 </Row>         

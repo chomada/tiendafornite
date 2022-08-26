@@ -31,14 +31,14 @@ const Item = ({ products }) => {
 
   return (
     <Col>
-      <Card border="success" className="personajes-principal card-detail">
+      <Card border="success" className="card-producto">
         <Card.Img
           variant="top"
           src="https://res.cloudinary.com/chomada/image/upload/v1660619263/4_szqp8p.png"
         />
 
         <Card.Body>
-          <Card.Title className="personaje-titulo negrita">
+          <Card.Title className="producto-titulo">
             {products.nombre}
           </Card.Title>
           <ListGroup className="list-group-flush listGroup negrita">
