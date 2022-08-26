@@ -7,7 +7,7 @@ import { collection, getDocs, query } from "firebase/firestore";
 
 
 const ItemListContainer = () => {
-    document.body.style = ' background: white !important;';
+    
     const [products, setProducts] = useState([]);
     const { id } = useParams();
 

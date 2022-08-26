@@ -6,37 +6,26 @@ body {
   background: linear-gradient(black, #472c4a 60%, #472c4a) !important
 }
 
-.card-detail {
-  height: 575px;
-  box-shadow: 0px 10px 10px black;
-  width: 95%;
-}
-
 .pointer{
   cursor: pointer;
 }
-
-.size-title{
-  font-size: 25px;
-}
-.card-detail2 {
-  margin-top: 1rem !important;
-  box-shadow: 0px 10px 10px black;
-}
 .titulo-portada {
   margin-top: 4px;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-.dropdown-menu {
-  background-color: #212529 !important;
 }
 .linkeado {
   display: flex;
   width: 100%;
   color: white;
+}
+.linkeado:hover {
+  color: #5e3465;
+}
+h2 {
+  font-size: 32px !important;
+}
+.negrita{
+  font-size: large;
+  font-weight: bold;
 }
 .marginL {
   margin-left: 1rem;
@@ -44,107 +33,29 @@ code {
 .marginR {
   margin-right: 1rem;
 }
-.linkeado:hover {
-  color: #5e3465;
+.mg-t20{
+  margin-top: 20px;
 }
-.personajes-principal {
-  margin: auto;
-  text-align: center;
-  align-items: center;
+.bg-dark {
+  background-color: #070808 !important ;
 }
-
-
-.border-success {
-  border-color: #9f35ac !important;
-}
-.iconos {
-  font-size: larger !important;
-  font-weight: bold !important;
+.disabled{
+  opacity: 0.3;
 }
 
-.personaje-titulo {
-  height: 60px;
-  color: #5e3465;
-}
-.personajeTexto {
-  color: black !important;
-}
-.imageRick {
-  margin: auto;
-}
-.addButton {
-  margin: 2px !important;
-  width: 98% !important;
-}
-.cart-item {
-  width: 70% !important;
-  margin: auto;
-  margin-bottom: 1rem;
-  text-align: center;
-  align-items: center;
-}
-.deleteButton {
-  margin-bottom: 2px;
-}
-.play-items {
-  width: 60%;
-}
-.play-card {
-  height: 200px;
-  box-shadow: 0px 10px 10px black;
-  width: 100%;
-}
-.play-total {
-  display: flex;
-}
-.play-items2 {
-  width: 30%;
+/* ----- VISTA MOBILE ----- */
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
+  .contenedor-gesto{
+    height: 4640px !important;
+  }
 }
 
-.vs {
-  text-align: center;
-  width: 5%;
-  align-items: center;
-  margin: auto;
-}
-
-.centradoTuto {
-  text-align: center;
-  margin: 2rem;
-}
-.boton-jugar {
-  margin: 2rem;
-  text-align: center;
-}
-.display-flex {
-  display: flex;
-}
-.poderJuego {
-  text-align: center;
-  margin-top: 4rem;
-}
-.dalePlay {
-  margin-top: 1rem !important;
-}
-
-.botonSeleccionado {
-  background-color: black !important;
-}
-.cardNoSeleccionada {
-  opacity: 50%;
-  cursor: pointer;
-}
-.falta1 {
-  color: orangered;
-}
-.completo {
-  color: green;
-}
-.volver {
-  text-align: center;
-  margin: 2rem;
-}
-
+/* ----- VISTA TABLET ----- */
 @media (max-width: 1200px) {
   .card-detail {
     height: 575px;
@@ -164,52 +75,9 @@ code {
   .dalePlay {
     font-size: 12px !important;
   }
-  /* body {
-    height: 800px;
-  } */
-}
-.marginT {
-  margin-bottom: 3rem;
-}
-.bg-dark {
-  background-color: #070808 !important ;
-}
-.marginB {
-  margin-bottom: 4rem;
 }
 
-
-@media (max-width: 767px) {
-  .social-icons li.title {
-    display: block;
-    margin-right: 0;
-    font-weight: 600;
-  }
-}
-.negrita{
-  font-size: large;
-  font-weight: bold;
-}
-.listGroup{
-  height: 200px;
-}
-.listItem{
-  height: 200px
-}
-
-
-
-/* ----------------------------------------------- */
-
-
-h2 {
-  font-size: 32px !important;
-}
-.bg-dark {
-  background-color: #070808 !important ;
-}
-
-
+/* -----------------------------------------------  */
 
 /* ----- HEADER ----- */
 .titulo-principal{
@@ -224,7 +92,7 @@ h2 {
   font-weight: 800;
 }
 .contenedor-gesto{
-  height: 300px;
+  height: 1320px;
   background-color: #352138;
   margin-top: 20px;
   border-radius: 6px;
@@ -236,6 +104,48 @@ h2 {
   padding: 10px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* ----- CARD PRODUCTOS ----- */
+.contenedor-cards{
+  padding: 15px;
+}
+.card-producto {
+  height: 390px;
+  box-shadow: 0px 10px 10px black;
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+}
+.producto-titulo {
+  height: 20px;
+  color: #5e3465;
+  font-weight: bold;
+}
+.listItem{
+  font-size: 15px !important;
+}
+.addButton {
+  margin: 2px !important;
+  width: 98% !important;
+}
+
+/* ----- METODOS DE PAGOS ----- */
+.contenedor-metodosPagos{
+  margin-top: 30px;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+/* ----- TRANSFERENCIA BANCARIA -----  */
+.contenedor-transferencia{
+  margin-top: 30px;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
 /* ----- PARALLAX ----- */
@@ -312,22 +222,10 @@ h2 {
   font-size: 12px;
 }
 
-/* ----- METODOS DE PAGOS ----- */
-.contenedor-metodosPagos{
-  margin-top: 30px;
-  color: white;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-
-
-
-
-
 .btn-primary{
   background-color: purple !important;
   border-color:rgb(255, 0, 255) !important;
+  font-weight: bold;
 }
 .swal2-html-container {
   z-index: 1;

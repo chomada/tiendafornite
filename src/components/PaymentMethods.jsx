@@ -20,22 +20,25 @@ export const PaymentMethods = () => {
           </div>
          
           <div className="col-12 col-lg-6 d-flex justify-content-center animate__animated animate__fadeIn mb-5 mb-lg-0">
-          <img
-              src={ TransferenciaBancaria }
-              alt="mercado pago"
-              className="img-thumbnail w-75 p-0 pointer"
-              onClick={()=> redirigir()}
-            />
+            <button className="d-flex justify-content-center"  onClick={()=> redirigir()}>
+              <img 
+                src={ TransferenciaBancaria }
+                alt="mercado pago"
+                className="img-thumbnail w-75 p-0 pointer" 
+              />
+            </button>
           </div>
           <div className="col-12 col-lg-6 d-flex justify-content-center animate__animated animate__fadeIn">
-            <img
-              src={ MercadoPago }
-              alt="mercado pago"
-              className="img-thumbnail w-75 p-0 pointer"
-            />
+            <button disabled={true} className="d-flex justify-content-center disabled" >
+              <img 
+                src={ MercadoPago }
+                alt="mercado pago"
+                className="img-thumbnail w-75 p-0 pointer"
+              />
+            </button>
           </div>
-          <div className="col-12 text-center mt-5">
-            <button
+          <div  className="col-12 text-center mt-5">
+            <button 
             className="btn btn-primary text-center mt-5"
             onClick={() => navigate(-1)}
             >
