@@ -9,11 +9,11 @@ export const TransferenciaBancaria = () => {
 
   return (
     <div className="negrita container w-50">
-      <h1>Datos de la cuenta</h1>
+      <h2 className="contenedor-transferencia text-center">Transferencia Bancaria</h2>
       <div className="row">
         <div className="col-12">
           <hr />
-          <h3 className="text-center">Federico Machado</h3>
+          <h3 className="contenedor-transferencia text-center">Federico Machado</h3>
           <div className="list-group list-group-flush">
             <div className="list-group-item d-flex justify-content-between">
               <div>
@@ -68,9 +68,8 @@ export const TransferenciaBancaria = () => {
               </div>
             </div>
           </div>
-
           <Toaster />
-          <button className="btn btn-primary" onClick={() => setModal(true)}>
+          <button className="mg-t20 btn btn-primary" onClick={() => setModal(true)}>
             Confirmar pago
           </button>
         </div>
