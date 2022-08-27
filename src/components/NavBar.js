@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 
+import { Link as LinkScroll } from 'react-scroll'
+
 import "../index.css";
 import { IconButton } from "@chakra-ui/react";
 import { FaGitlab } from "react-icons/fa";
@@ -23,15 +25,19 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
+<<<<<<< HEAD
             <Link className="linkeado marginR pb-2 pb-lg-0" to="/productos">
+=======
+            <LinkScroll className="linkeado marginR pointer" to="productos" spy={true} smooth={true} offset={-90} duration={500}>
+>>>>>>> a03f03e590dd826303ffb933ffff0b8bbe48d570
               Productos
-            </Link>
+            </LinkScroll>
           </Nav>
 
           <Nav>
-            <Link className="linkeado marginR" to="/como-comprar">
+            <LinkScroll className="linkeado marginR pointer" to="como-comprar" spy={true} smooth={true} offset={-90} duration={500}>
               Cómo comprar?
-            </Link>
+            </LinkScroll>
           </Nav>
         </Navbar.Collapse>
       </Container>

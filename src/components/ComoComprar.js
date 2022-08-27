@@ -10,7 +10,7 @@ const ComoComprar = () => {
       <Container>
           <Row>
             <Col className="contenedor-comoComprar">
-              <h2>Cómo comprar?</h2>
+              <h2 id="como-comprar">Cómo comprar?</h2>
             </Col>
           </Row>
           <Row>      
