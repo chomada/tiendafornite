@@ -2,9 +2,11 @@ body {
   font-family: "Montserrat", sans-serif !important;
   position: relative;
   min-height: 100vh !important;
-  padding-bottom: 200px;
+  padding-bottom: 170px;
   background: linear-gradient(black, #472c4a 60%, #472c4a) !important
 }
+
+
 
 .pointer{
   cursor: pointer;
@@ -112,7 +114,7 @@ h2 {
   padding: 15px;
 }
 .card-producto {
-  height: 390px;
+  height: auto;
   box-shadow: 0px 10px 10px black;
   width: 95%;
   margin: auto;
@@ -240,4 +242,25 @@ h2 {
   text-align: center;
   word-wrap: break-word;
   word-break: break-word;
+}
+
+/* carrito */
+
+.contador-carrito{
+  position: relative;
+}
+
+.contador{
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background-color: #fff;
+  padding: 1px 4px;
+  color: #805ad5;
+  font-weight: 900;
+  border-radius: 15px;
+}
+
+.carrito-icon{
+  font-size: 25px;
 }

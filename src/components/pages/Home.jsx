@@ -1,13 +1,13 @@
-import { Col, Container, Row } from "react-bootstrap";
-import ComoComprar from "../ComoComprar";
+// import { Col, Container, Row } from "react-bootstrap";
+// import ComoComprar from "../ComoComprar";
 import Header from "../Header";
-import ItemListContainer from "../ItemListContainer"
+// import ItemListContainer from "../ItemListContainer"
 
 const Home = () => {
     return(
         <>
             <Header />
-            <Container>
+            {/* <Container>
                 <Row>
                     <Col className="contenedor-productos">
                         <h2 id="productos">Productos</h2> 
@@ -32,7 +32,7 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
-            <ComoComprar/>   
+            <ComoComprar/>    */}
         </>
     );
     

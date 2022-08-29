@@ -15,9 +15,9 @@ const BannerCarousel = () => {
             src={Fortnite6}
             alt="First slide"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Tienda Fortnite</h3>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -26,9 +26,9 @@ const BannerCarousel = () => {
             alt="Second slide"
           />
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Tienda Fortnite</h3>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -37,9 +37,9 @@ const BannerCarousel = () => {
             alt="Third slide"
           />
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Tienda Fortnite</h3>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -48,9 +48,9 @@ const BannerCarousel = () => {
             alt="Third slide"
           />
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Tienda Fortnite</h3>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -59,9 +59,9 @@ const BannerCarousel = () => {
             alt="Third slide"
           />
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Tienda Fortnite</h3>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
       </Carousel>
     </>

@@ -3,9 +3,12 @@ import ModalCompra from "./ModalCompra";
 import { Toaster, toast } from "react-hot-toast";
 import { CopyClipboard } from "./CopyClipboard";
 import { RiClipboardLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 export const TransferenciaBancaria = () => {
   const [modal, setModal] = useState(false);
+
+  const navigate = useNavigate()
 
   return (
     <div className="negrita container w-50">
@@ -71,6 +74,9 @@ export const TransferenciaBancaria = () => {
           <Toaster />
           <button className="mg-t20 btn btn-primary" onClick={() => setModal(true)}>
             Confirmar pago
+          </button>
+          <button className="mg-t20 btn btn-primary ms-sm-2" onClick={() => navigate(-1)}>
+            Volver
           </button>
         </div>
       </div>

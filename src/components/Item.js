@@ -56,7 +56,7 @@ const Item = ({ products }) => {
             className="addButton"
             onClick={() => handlePurchase()}
           >
-            Comprar
+            Agregar al carrito
           </Button>
         </Card.Body>
       </Card>

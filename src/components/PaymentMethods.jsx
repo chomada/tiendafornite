@@ -20,11 +20,12 @@ export const PaymentMethods = () => {
           </div>
          
           <div className="col-12 col-lg-6 d-flex justify-content-center animate__animated animate__fadeIn mb-5 mb-lg-0">
-            <button className="d-flex justify-content-center"  onClick={()=> redirigir()}>
+            <button className="d-flex justify-content-center">
               <img 
                 src={ TransferenciaBancaria }
                 alt="mercado pago"
-                className="img-thumbnail w-75 p-0 pointer" 
+                className="img-thumbnail w-75 p-0 pointer"
+                onClick={()=> redirigir()}
               />
             </button>
           </div>
