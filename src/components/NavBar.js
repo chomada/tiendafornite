@@ -18,18 +18,14 @@ const NavBar = () => {
               colorScheme="steal"
               aria-label="lab"
               icon={<FaGitlab />}
-            ></IconButton>{" "}
+            ></IconButton>
             <span className="titulo-portada">Tienda Fornite</span>
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-<<<<<<< HEAD
-            <Link className="linkeado marginR pb-2 pb-lg-0" to="/productos">
-=======
             <LinkScroll className="linkeado marginR pointer" to="productos" spy={true} smooth={true} offset={-90} duration={500}>
->>>>>>> a03f03e590dd826303ffb933ffff0b8bbe48d570
               Productos
             </LinkScroll>
           </Nav>
