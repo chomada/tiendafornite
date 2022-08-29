@@ -35,21 +35,19 @@ const NavBar = () => {
             </Link>
           </Nav>
 
-          <Nav className="d-flex align-items-center">
+          <Nav className="d-flex ">
             {/* <LinkScroll className="linkeado marginR pointer" to="como-comprar" spy={true} smooth={true} offset={-90} duration={500}>
               Cómo comprar?
             </LinkScroll> */}
             <Link className="linkeado marginR pointer" to="/como-comprar">
               Cómo comprar?
             </Link>
-              <div className="d-flex align-items-center contador-carrito">
-
-              <span className="contador">{ contadorProductos }</span>
+            <div className="d-flex align-items-center contador-carrito mt-2 mt-lg-0">
+              <span className="contador">{contadorProductos}</span>
               <Link className="pointer text-light" to="/como-comprar">
-                <AiOutlineShoppingCart className="carrito-icon"/>
+                <AiOutlineShoppingCart className="carrito-icon" />
               </Link>
-              </div>
-           
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>

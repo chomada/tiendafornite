@@ -264,3 +264,7 @@ h2 {
 .carrito-icon{
   font-size: 25px;
 }
+
+.contenedor-comprar-carrito{
+  flex-direction: column;
+}
