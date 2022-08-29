@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
-import { Link as LinkScroll } from 'react-scroll'
+// import { Link as LinkScroll } from 'react-scroll'
 
 import "../index.css";
 import { IconButton } from "@chakra-ui/react";
 import { FaGitlab } from "react-icons/fa";
 
 const NavBar = () => {
+  const [contadorProductos, setContadorProductos] = useState(0);
   return (
     <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -25,15 +27,29 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <LinkScroll className="linkeado marginR pointer" to="productos" spy={true} smooth={true} offset={-90} duration={500}>
+            {/* <LinkScroll className="linkeado marginR pointer" to="productos" spy={true} smooth={true} offset={-90} duration={500}>
               Productos
-            </LinkScroll>
+            </LinkScroll> */}
+            <Link className="linkeado marginR pointer" to="/productos">
+              Productos
+            </Link>
           </Nav>
 
-          <Nav>
-            <LinkScroll className="linkeado marginR pointer" to="como-comprar" spy={true} smooth={true} offset={-90} duration={500}>
+          <Nav className="d-flex align-items-center">
+            {/* <LinkScroll className="linkeado marginR pointer" to="como-comprar" spy={true} smooth={true} offset={-90} duration={500}>
               Cómo comprar?
-            </LinkScroll>
+            </LinkScroll> */}
+            <Link className="linkeado marginR pointer" to="/como-comprar">
+              Cómo comprar?
+            </Link>
+              <div className="d-flex align-items-center contador-carrito">
+
+              <span className="contador">{ contadorProductos }</span>
+              <Link className="pointer text-light" to="/como-comprar">
+                <AiOutlineShoppingCart className="carrito-icon"/>
+              </Link>
+              </div>
+           
           </Nav>
         </Navbar.Collapse>
       </Container>

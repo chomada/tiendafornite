@@ -19,7 +19,7 @@ export const TransferenciaBancaria = () => {
               <div>
                 <b>Mi CBU:</b> <span>11111111111111111111111111</span>
               </div>
-              <div>
+              <div>e
                 <CopyClipboard value="11111111111111111111111111">
                   <RiClipboardLine
                     onClick={() => toast.success("copiado al portapapeles")}
