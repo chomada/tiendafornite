@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+
+import { CartContext } from '../context/CartProvider.jsx'
 
 // import { Link as LinkScroll } from 'react-scroll'
 
@@ -10,7 +12,7 @@ import { IconButton } from "@chakra-ui/react";
 import { FaGitlab } from "react-icons/fa";
 
 const NavBar = () => {
-  const [contadorProductos, setContadorProductos] = useState(0);
+  const { infoProduct } = useContext(CartContext)
   return (
     <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -43,8 +45,8 @@ const NavBar = () => {
               Cómo comprar?
             </Link>
             <div className="d-flex align-items-center contador-carrito mt-2 mt-lg-0">
-              <span className="contador">{contadorProductos}</span>
-              <Link className="pointer text-light" to="/como-comprar">
+              <span className="contador">{infoProduct.length}</span>
+              <Link className="pointer text-light" to="/productos/carrito">
                 <AiOutlineShoppingCart className="carrito-icon" />
               </Link>
             </div>
