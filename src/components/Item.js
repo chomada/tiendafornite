@@ -49,9 +49,9 @@ const Item = ({ products }) => {
       allowEscapeKey: false,
     }).then((result) => {
       if (result.isConfirmed) {
-        const newItem = modificarPrecio(product,contadorProductos)
-        console.log(newItem)
-        // agregarProducto(newItem);
+        // const newItem = modificarPrecio(product,contadorProductos)
+        
+        agregarProducto(product);
         Swal.fire({
           title: "Agregado con éxito al carrito",
           icon: "success",
