@@ -12,7 +12,7 @@ export const ShoppingCart = () => {
   console.log(infoProduct);
 
   return (
-    <>
+    <div className="container">
       {infoProduct.length > 0 ? (
         <Row xs={1} sm={2} lg={3} xl={4} className="g-4 personajes-principal">
           {infoProduct.map((product) => (
@@ -59,12 +59,10 @@ export const ShoppingCart = () => {
           ))}
         </Row>
       ) : (
-        <div className="container">
-          <div className="contenedor-carrito-sin-elementos">
-            <h2 className="text-light">No posee elementos en el carrito</h2>
-          </div>
+        <div className="contenedor-carrito-sin-elementos">
+          <h2 className="text-light">No posee elementos en el carrito</h2>
         </div>
       )}
-    </>
+    </div>
   );
 };
