@@ -9,7 +9,7 @@ export const ShoppingCart = () => {
   const navigate = useNavigate();
   const { infoProduct, eliminarProducto } = useContext(CartContext);
 
-  console.log(infoProduct);
+  
 
   return (
     <div className="container">

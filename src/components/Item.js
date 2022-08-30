@@ -17,19 +17,25 @@ const Item = ({ products }) => {
 
   const [contadorProductos, setContadorProductos] = useState(1);
 
-  const { modificarInfoProduct } = useContext(CartContext);
+  const { agregarProducto, modificarPrecio } = useContext(CartContext);
 
-  const restarProducto = ()=>{
+  const restarProducto = (product)=>{
     if(contadorProductos === 1) return
     setContadorProductos(contadorProductos - 1)
+    // let newData = 
+    
   }
 
-  const sumarProducto = ()=>{
+  const sumarProducto = (product)=>{
+    console.log(product)
     if(contadorProductos === 10) return
     setContadorProductos(contadorProductos + 1)
+    
   }
 
-  const handlePurchase = (item) => {
+
+
+  const handlePurchase = (product) => {
     Swal.fire({
       title: "Importante",
       text: "¿Ya pasaron 48 hs desde que nos agregó en el juego?",
@@ -43,7 +49,9 @@ const Item = ({ products }) => {
       allowEscapeKey: false,
     }).then((result) => {
       if (result.isConfirmed) {
-        modificarInfoProduct(item);
+        const newItem = modificarPrecio(product,contadorProductos)
+        console.log(newItem)
+        // agregarProducto(newItem);
         Swal.fire({
           title: "Agregado con éxito al carrito",
           icon: "success",
@@ -75,12 +83,12 @@ const Item = ({ products }) => {
               </ListGroupItem>
 
               <ListGroupItem>
-                <p className="negrita selected-none">Precio en pesos: ${products.precio}</p>
+                <p className="negrita selected-none">Precio en pesos: ${products.precio * contadorProductos}</p>
               </ListGroupItem>
               <div className="contenedor-mas-menos">
-                <AiOutlineMinusCircle className="fs-28 pointer" onClick={ ()=> restarProducto() }/>
-                <span className="selected-none">{contadorProductos}</span>
-                <HiOutlinePlusCircle className="fs-28 pointer" onClick={ ()=> sumarProducto() }/>
+                <AiOutlineMinusCircle className="fs-28 pointer" onClick={ ()=> restarProducto(products) }/>
+                <span className="selected-none">{ contadorProductos }</span>
+                <HiOutlinePlusCircle className="fs-28 pointer" onClick={ ()=> sumarProducto(products) }/>
               </div>
             </ListGroup>
 
