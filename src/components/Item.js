@@ -1,14 +1,19 @@
 import { Button } from "@chakra-ui/react";
 import { Card, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import React from "react";
+import React, { useContext } from "react";
 import Swal from "sweetalert2";
+import { CartContext } from "../context/CartProvider.jsx"
+// import { AlertSuccess } from '../alerts/AlertSuccess'
 
 import "../index.css";
 
 const Item = ({ products }) => {
   const navigate = useNavigate();
-  const handlePurchase = () => {
+
+  const { modificarInfoProduct } = useContext(CartContext);
+
+  const handlePurchase = (item) => {
     Swal.fire({
       title: "Importante",
       text: "¿Ya pasaron 48 hs desde que nos agregó en el juego?",
@@ -22,7 +27,12 @@ const Item = ({ products }) => {
       allowEscapeKey: false,
     }).then((result) => {
       if (result.isConfirmed) {
-        navigate("/productos/metodo-pago");
+        modificarInfoProduct(item);
+        Swal.fire({
+          title: 'Agregado con éxito al carrito',
+          icon: 'success',
+          // timer: 2000
+        })
       } else if (result.isDismissed) {
         navigate("/como-comprar");
       }
@@ -38,9 +48,7 @@ const Item = ({ products }) => {
         />
 
         <Card.Body>
-          <Card.Title className="producto-titulo">
-            {products.nombre}
-          </Card.Title>
+          <Card.Title className="producto-titulo">{products.nombre}</Card.Title>
           <ListGroup className="list-group-flush listGroup negrita">
             <ListGroupItem className="listItem">
               {products.descripcion}
@@ -54,9 +62,16 @@ const Item = ({ products }) => {
           <Button
             colorScheme="purple"
             className="addButton"
-            onClick={() => handlePurchase()}
+            onClick={() => handlePurchase(products)}
           >
             Agregar al carrito
+          </Button>
+          <Button
+            colorScheme="purple"
+            className="addButton"
+            onClick={() => navigate("/productos/carrito")}
+          >
+            Ver el carrito
           </Button>
         </Card.Body>
       </Card>
@@ -65,4 +80,3 @@ const Item = ({ products }) => {
 };
 
 export default Item;
-//prueba

@@ -9,6 +9,7 @@ import { PaymentMethods } from "./components/PaymentMethods";
 import NavBar from "./components/NavBar";
 import { TransferenciaBancaria } from "./components/TransferenciaBancaria";
 import Home from "./components/pages/Home";
+import { ShoppingCart } from "./components/pages/ShoppingCart";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/productos/metodo-pago" element={<PaymentMethods />} />
           <Route path="/como-comprar" element={<ComoComprar />} />
           <Route path="/transferencia-bancaria" element={<TransferenciaBancaria />} />
+          <Route path="/productos/carrito" element={<ShoppingCart />} />
 
           <Route path="*" element={<Home />} />
           

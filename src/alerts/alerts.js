@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 
 export const AlertSuccess = ()=>{
   Swal.fire({
-    title: 'Compra exitosa',
+    title: 'Agregado con éxito al carrito',
     icon: 'success',
     // timer: 2000
   })

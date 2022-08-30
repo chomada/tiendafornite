@@ -255,7 +255,7 @@ h2 {
   top: -10px;
   left: 20px;
   background-color: #fff;
-  padding: 1px 4px;
+  padding: 1px 8px;
   color: #805ad5;
   font-weight: 900;
   border-radius: 15px;
@@ -263,4 +263,15 @@ h2 {
 
 .carrito-icon{
   font-size: 25px;
+}
+
+.contenedor-comprar-carrito{
+  flex-direction: column;
+}
+
+.contenedor-carrito-sin-elementos{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  align-items: center;
 }
