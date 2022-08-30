@@ -288,3 +288,7 @@ h2 {
 .fs-28{
   font-size: 25px;
 }
+
+.selected-none{
+  user-select: none;
+}

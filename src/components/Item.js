@@ -19,6 +19,16 @@ const Item = ({ products }) => {
 
   const { modificarInfoProduct } = useContext(CartContext);
 
+  const restarProducto = ()=>{
+    if(contadorProductos === 1) return
+    setContadorProductos(contadorProductos - 1)
+  }
+
+  const sumarProducto = ()=>{
+    if(contadorProductos === 10) return
+    setContadorProductos(contadorProductos + 1)
+  }
+
   const handlePurchase = (item) => {
     Swal.fire({
       title: "Importante",
@@ -52,24 +62,25 @@ const Item = ({ products }) => {
           <Card.Img
             variant="top"
             src="https://res.cloudinary.com/chomada/image/upload/v1660619263/4_szqp8p.png"
+            className="selected-none"
           />
 
           <Card.Body>
-            <Card.Title className="producto-titulo">
+            <Card.Title className="producto-titulo selected-none">
               {products.nombre}
             </Card.Title>
             <ListGroup className="list-group-flush listGroup negrita">
-              <ListGroupItem className="listItem">
+              <ListGroupItem className="listItem selected-none">
                 {products.descripcion}
               </ListGroupItem>
 
               <ListGroupItem>
-                <p className="negrita">Precio en pesos: ${products.precio}</p>
+                <p className="negrita selected-none">Precio en pesos: ${products.precio}</p>
               </ListGroupItem>
               <div className="contenedor-mas-menos">
-                <AiOutlineMinusCircle className="fs-28" />
-                <span>{contadorProductos}</span>
-                <HiOutlinePlusCircle className="fs-28" />
+                <AiOutlineMinusCircle className="fs-28 pointer" onClick={ ()=> restarProducto() }/>
+                <span className="selected-none">{contadorProductos}</span>
+                <HiOutlinePlusCircle className="fs-28 pointer" onClick={ ()=> sumarProducto() }/>
               </div>
             </ListGroup>
 
