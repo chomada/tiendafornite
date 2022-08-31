@@ -5,11 +5,10 @@ import { Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const ItemList = ({ products }) => {
-  const navigate = useNavigate();
 
   return (
-    <>
-      <Row xs={1} sm={2} lg={3} xl={4} className="g-4 personajes-principal">
+    <><div id='prod' className="marginProd"></div>
+      <Row xs={1} sm={2} lg={3} xl={4} className="g-4  personajes-principal">
         {products.map((prod) => {
           return <Item key={prod.id} products={prod} />;
         })}
@@ -17,19 +16,16 @@ const ItemList = ({ products }) => {
       <div className="col-12 text-center mt-5">
         <button
           className="btn btn-primary text-center me-2"
-          onClick={() => navigate('/')}
+          onClick={() => window.location.replace("#prod")}
         >
           Inicio
         </button>
-        <button
-          
-          className="btn btn-primary text-center"
-          onClick={() => navigate("/productos/carrito")}
-        >
-          Ver el carrito
-        </button>
+       
         
       </div>
+       {/* <LinkScroll className="linkeado marginR pointer" to="productos" spy={true} smooth={true} offset={-90} duration={500}>
+              Productos
+            </LinkScroll> */}
     </>
   );
 };
