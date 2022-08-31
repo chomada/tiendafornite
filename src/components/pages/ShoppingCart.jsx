@@ -1,15 +1,53 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/CartProvider";
 import { useNavigate } from "react-router-dom";
 
 import { Button } from "@chakra-ui/react";
 import { Card, Col, ListGroup, ListGroupItem, Row } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 export const ShoppingCart = () => {
   const navigate = useNavigate();
-  const { infoProduct, eliminarProducto } = useContext(CartContext);
+  const { infoProduct, eliminarProducto, totalCompra } = useContext(CartContext);
 
-  
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+
+    if (infoProduct.length > 0) {
+      
+      setTotal(totalCompra())
+    }
+    
+
+
+  }, [infoProduct]);
+
+
+
+  const finalizarCompra = ()=>{
+    Swal.fire({
+      title: "Importante",
+      text: "¿Ya pasaron 48 hs desde que nos agregó en el juego?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí",
+      cancelButtonText: "No",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // const newItem = modificarPrecio(product,contadorProductos)
+        navigate("/productos/metodo-pago")
+        
+        
+      } else if (result.isDismissed) {
+        navigate("/como-comprar");
+      }
+    });
+  }
 
   return (
     <div className="container">
@@ -17,7 +55,9 @@ export const ShoppingCart = () => {
         <>
           <Row xs={1} sm={2} lg={3} xl={4} className="g-4 personajes-principal">
             {infoProduct.map((product) => (
+              
               <Col key={product.id}>
+
                 <Card border="success" className="card-producto">
                   <Card.Img
                     variant="top"
@@ -26,7 +66,7 @@ export const ShoppingCart = () => {
 
                   <Card.Body>
                     <Card.Title className="producto-titulo">
-                      {product.nombre}
+                    { product.cantidad } - {product.nombre}
                     </Card.Title>
                     <ListGroup className="list-group-flush listGroup negrita">
                       <ListGroupItem className="listItem">
@@ -35,7 +75,7 @@ export const ShoppingCart = () => {
 
                       <ListGroupItem>
                         <p className="negrita">
-                          Precio en pesos: ${product.precio}
+                          Precio en pesos: ${product.precio * product.cantidad}
                         </p>
                       </ListGroupItem>
                     </ListGroup>
@@ -47,24 +87,28 @@ export const ShoppingCart = () => {
                     >
                       Eliminar del carrito
                     </Button>
-                    <Button
-                      colorScheme="purple"
-                      className="addButton"
-                      onClick={() => navigate("/productos/metodo-pago")}
-                    >
-                      Comprar
-                    </Button>
                   </Card.Body>
                 </Card>
               </Col>
             ))}
           </Row>
+
+          <div className="col-12 text-center mt-5">
+              <span className="btn btn-outline-primary">Total compra: {total}</span>
+          </div>
           <div className="col-12 text-center mt-5">
             <button
-              className="btn btn-primary text-center mt-5"
+              className="btn btn-primary text-center me-2"
               onClick={() => navigate("/productos")}
             >
               Volver a productos
+            </button>
+            <button
+              
+              className="btn btn-info text-center"
+              onClick={() => finalizarCompra()}
+            >
+              Finalizar compra
             </button>
           </div>
         </>

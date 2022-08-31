@@ -27,7 +27,7 @@ const Item = ({ products }) => {
   }
 
   const sumarProducto = (product)=>{
-    console.log(product)
+    
     if(contadorProductos === 10) return
     setContadorProductos(contadorProductos + 1)
     
@@ -35,31 +35,24 @@ const Item = ({ products }) => {
 
 
 
-  const handlePurchase = (product) => {
+  const handlePurchase = (product, contadorProductos) => {
+    agregarProducto(product, contadorProductos);
     Swal.fire({
-      title: "Importante",
-      text: "¿Ya pasaron 48 hs desde que nos agregó en el juego?",
-      icon: "warning",
+      title: "Agregado con éxito al carrito",
+      text: "",
+      icon: "success",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Sí",
-      cancelButtonText: "No",
+      confirmButtonText: "Seguir comprando",
+      cancelButtonText: "Ver carrito",
       allowOutsideClick: false,
       allowEscapeKey: false,
     }).then((result) => {
-      if (result.isConfirmed) {
+      if (result.isDismissed) {
         // const newItem = modificarPrecio(product,contadorProductos)
-        
-        agregarProducto(product);
-        Swal.fire({
-          title: "Agregado con éxito al carrito",
-          icon: "success",
-          // timer: 2000
-        });
-      } else if (result.isDismissed) {
-        navigate("/como-comprar");
-      }
+        navigate("/productos/carrito");        
+      } 
     });
   };
 
@@ -75,7 +68,7 @@ const Item = ({ products }) => {
 
           <Card.Body>
             <Card.Title className="producto-titulo selected-none">
-              {products.nombre}
+             {products.nombre}
             </Card.Title>
             <ListGroup className="list-group-flush listGroup negrita">
               <ListGroupItem className="listItem selected-none">
@@ -95,17 +88,11 @@ const Item = ({ products }) => {
             <Button
               colorScheme="purple"
               className="addButton"
-              onClick={() => handlePurchase(products)}
+              onClick={() => handlePurchase(products, contadorProductos)}
             >
               Agregar al carrito
             </Button>
-            <Button
-              colorScheme="purple"
-              className="addButton"
-              onClick={() => navigate("/productos/carrito")}
-            >
-              Ver el carrito
-            </Button>
+            
           </Card.Body>
         </Card>
       </Col>
