@@ -3,31 +3,52 @@ import React, { createContext, useState } from "react";
 export const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-
   const [infoProduct, setInfoProduct] = useState([]);
-  
 
-  const agregarProducto = (info)=>{
-    setInfoProduct([ ...infoProduct, info  ])
-  }
+  const validarCarrito = (producto) => {
+    return infoProduct.find((item) => item.id === producto.id);
+  };
 
-  const modificarPrecio = (item, contador)=>{
-    let newPrecio = item.precio * contador
-    setInfoProduct([
-      ...infoProduct,
-      { precio: newPrecio }
-    ])
-  }
+  const agregarProducto = (info, contador) => {
+    if (validarCarrito(info)) {
+      const infoNuevo = infoProduct.filter((item) => item.id === info.id);
 
-  const eliminarProducto = (id)=>{
-    const newData = infoProduct.filter( product => product.id !== id )
-    setInfoProduct(newData)
-  }
+      infoNuevo[0].cantidad = infoNuevo[0].cantidad + contador;
 
+      const nuevoCarritoFiltrado = infoProduct.filter(
+        (item) => item.id !== info.id
+      );
 
+      nuevoCarritoFiltrado.push(infoNuevo[0]);
 
+      setInfoProduct(nuevoCarritoFiltrado);
+    } else {
+      setInfoProduct([...infoProduct, { ...info, cantidad: contador }]);
+    }
+  };
 
-  return <CartContext.Provider value={{ infoProduct, agregarProducto, eliminarProducto, modificarPrecio }}>{ children }</CartContext.Provider>;
+  const totalCompra = () => {
+    const precios = infoProduct.map((item) => item.cantidad * item.precio);
+    return precios.reduce((a, b) => a + b);
+  };
+
+  const eliminarProducto = (id) => {
+    const newData = infoProduct.filter((product) => product.id !== id);
+    setInfoProduct(newData);
+  };
+
+  return (
+    <CartContext.Provider
+      value={{
+        infoProduct,
+        agregarProducto,
+        eliminarProducto,
+        totalCompra,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
 };
 
 export default CartProvider;

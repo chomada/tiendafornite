@@ -16,11 +16,19 @@ const ItemList = ({ products }) => {
       </Row>
       <div className="col-12 text-center mt-5">
         <button
-          className="btn btn-primary text-center mt-5"
+          className="btn btn-primary text-center me-2"
           onClick={() => navigate('/')}
         >
           Inicio
         </button>
+        <button
+          
+          className="btn btn-primary text-center"
+          onClick={() => navigate("/productos/carrito")}
+        >
+          Ver el carrito
+        </button>
+        
       </div>
     </>
   );
