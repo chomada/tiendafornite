@@ -67,14 +67,15 @@ export const ShoppingCart = () => {
 
                   <Card.Body>
                     <Card.Title className="producto-titulo">
-                    { product.cantidad } - {product.nombre}
+                     {product.nombre}
                     </Card.Title>
                     <ListGroup className="list-group-flush listGroup negrita">
-                      <ListGroupItem className="listItem">
+                      <ListGroupItem className="listItem4">
                         {product.descripcion}
+                        <p>Cantidad: { product.cantidad } </p>
                       </ListGroupItem>
 
-                      <ListGroupItem>
+                      <ListGroupItem className="listItem3">
                         <p className="negrita">
                           Precio en pesos: ${product.precio * product.cantidad}
                         </p>
