@@ -7,8 +7,16 @@ const CartProvider = ({ children }) => {
   const [infoProduct, setInfoProduct] = useState([]);
   
 
-  const modificarInfoProduct = (info)=>{
+  const agregarProducto = (info)=>{
     setInfoProduct([ ...infoProduct, info  ])
+  }
+
+  const modificarPrecio = (item, contador)=>{
+    let newPrecio = item.precio * contador
+    setInfoProduct([
+      ...infoProduct,
+      { precio: newPrecio }
+    ])
   }
 
   const eliminarProducto = (id)=>{
@@ -19,7 +27,7 @@ const CartProvider = ({ children }) => {
 
 
 
-  return <CartContext.Provider value={{ infoProduct, modificarInfoProduct, eliminarProducto }}>{ children }</CartContext.Provider>;
+  return <CartContext.Provider value={{ infoProduct, agregarProducto, eliminarProducto, modificarPrecio }}>{ children }</CartContext.Provider>;
 };
 
 export default CartProvider;
