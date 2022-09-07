@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@chakra-ui/react";
 import { Card, Col, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 import Swal from "sweetalert2";
+import { Badge,Text } from '@chakra-ui/react'
 
 export const ShoppingCart = () => {
   const navigate = useNavigate();
@@ -66,14 +67,15 @@ export const ShoppingCart = () => {
 
                   <Card.Body>
                     <Card.Title className="producto-titulo">
-                    { product.cantidad } - {product.nombre}
+                     {product.nombre}
                     </Card.Title>
                     <ListGroup className="list-group-flush listGroup negrita">
-                      <ListGroupItem className="listItem">
+                      <ListGroupItem className="listItem4">
                         {product.descripcion}
+                        <p>Cantidad: { product.cantidad } </p>
                       </ListGroupItem>
 
-                      <ListGroupItem>
+                      <ListGroupItem className="listItem3">
                         <p className="negrita">
                           Precio en pesos: ${product.precio * product.cantidad}
                         </p>
@@ -94,18 +96,18 @@ export const ShoppingCart = () => {
           </Row>
 
           <div className="col-12 text-center mt-5">
-              <span className="btn btn-outline-primary">Total compra: {total}</span>
+          <Text fontWeight='bold'>
+      <Badge  >
+      Total compra: {total}
+      </Badge>
+      
+    </Text>
           </div>
-          <div className="col-12 text-center mt-5">
-            <button
-              className="btn btn-primary text-center me-2"
-              onClick={() => navigate("/productos")}
-            >
-              Volver a productos
-            </button>
+          <div className="col-12 text-center mt-2">
+           
             <button
               
-              className="btn btn-info text-center"
+              className="btn btn-warning text-center"
               onClick={() => finalizarCompra()}
             >
               Finalizar compra
