@@ -17,7 +17,7 @@ const Item = ({ products }) => {
 
   const [contadorProductos, setContadorProductos] = useState(1);
 
-  const { agregarProducto, modificarPrecio } = useContext(CartContext);
+  const { agregarProducto } = useContext(CartContext);
 
   const restarProducto = (product)=>{
     if(contadorProductos === 1) return
