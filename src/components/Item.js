@@ -41,8 +41,8 @@ const Item = ({ products }) => {
       text: "",
       icon: "success",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      confirmButtonColor: "#800080",
+      cancelButtonColor: "#ecc94b",
       confirmButtonText: "Seguir comprando",
       cancelButtonText: "Ver carrito",
       allowOutsideClick: false,
@@ -75,7 +75,7 @@ const Item = ({ products }) => {
               </ListGroupItem>
 
               <ListGroupItem>
-                <p className="negrita selected-none">Precio en pesos: ${products.precio * contadorProductos}</p>
+                <p className="listItem2 negrita selected-none">Precio en pesos: ${products.precio * contadorProductos}</p>
               </ListGroupItem>
               <div className="contenedor-mas-menos">
                 <AiOutlineMinusCircle className="fs-28 pointer" onClick={ ()=> restarProducto(products) }/>

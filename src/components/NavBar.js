@@ -5,7 +5,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 
 import { CartContext } from '../context/CartProvider.jsx'
 
-// import { Link as LinkScroll } from 'react-scroll'
+
 
 import "../index.css";
 import { IconButton } from "@chakra-ui/react";
@@ -29,18 +29,14 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            {/* <LinkScroll className="linkeado marginR pointer" to="productos" spy={true} smooth={true} offset={-90} duration={500}>
-              Productos
-            </LinkScroll> */}
+           
             <Link className="linkeado marginR pointer" to="/productos">
               Productos
             </Link>
           </Nav>
 
           <Nav className="d-flex ">
-            {/* <LinkScroll className="linkeado marginR pointer" to="como-comprar" spy={true} smooth={true} offset={-90} duration={500}>
-              Cómo comprar?
-            </LinkScroll> */}
+           
             <Link className="linkeado marginR pointer" to="/como-comprar">
               Cómo comprar?
             </Link>

@@ -72,7 +72,7 @@ export const TransferenciaBancaria = () => {
             </div>
           </div>
           <Toaster />
-          <button className="mg-t20 btn btn-primary" onClick={() => setModal(true)}>
+          <button className="mg-t20 btn btn-warning" onClick={() => setModal(true)}>
             Confirmar pago
           </button>
           <button className="mg-t20 btn btn-primary ms-sm-2" onClick={() => navigate(-1)}>
