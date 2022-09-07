@@ -17,21 +17,20 @@ const ItemList = ({ products }) => {
       <div className="col-12 text-center mt-5">
         <button
           className="btn btn-primary text-center me-2"
-          onClick={() => navigate('/')}
+          onClick={() => navigate("/")}
         >
           Inicio
         </button>
         <button
-          
           className="btn btn-primary text-center"
           onClick={() => navigate("/productos/carrito")}
         >
           Ver el carrito
         </button>
-        
       </div>
     </>
   );
 };
 
 export default ItemList;
+

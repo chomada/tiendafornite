@@ -45,7 +45,7 @@ const NavBar = () => {
               Cómo comprar?
             </Link>
             <div className="d-flex align-items-center contador-carrito mt-2 mt-lg-0">
-              <span className="contador">{infoProduct.length}</span>
+              <span className="contador">{infoProduct?.length}</span>
               <Link className="pointer text-light" to="/productos/carrito">
                 <AiOutlineShoppingCart className="carrito-icon" />
               </Link>

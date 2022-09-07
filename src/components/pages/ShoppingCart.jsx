@@ -6,18 +6,26 @@ import { Button } from "@chakra-ui/react";
 import { Card, Col, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 import Swal from "sweetalert2";
 
+const data = JSON.parse(localStorage.getItem('productos')) || []
+
+
+
 export const ShoppingCart = () => {
   const navigate = useNavigate();
-  const { infoProduct, eliminarProducto, totalCompra } = useContext(CartContext);
+  const { infoProduct, eliminarProducto, totalCompra, vaciarCarrito, inicioCarritoStorage } = useContext(CartContext);
 
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
 
+    
+    // inicioCarritoStorage( JSON.parse(localStorage.getItem('productos')) || [] )
     if (infoProduct.length > 0) {
       
       setTotal(totalCompra())
     }
+
+
     
 
 
@@ -97,6 +105,9 @@ export const ShoppingCart = () => {
               <span className="btn btn-outline-primary">Total compra: {total}</span>
           </div>
           <div className="col-12 text-center mt-5">
+              <button className="btn btn-danger" onClick={()=> vaciarCarrito()}>Vaciar carrito</button>
+          </div>
+          <div className="col-12 text-center mt-5">
             <button
               className="btn btn-primary text-center me-2"
               onClick={() => navigate("/productos")}
@@ -120,9 +131,9 @@ export const ShoppingCart = () => {
           <div className="col-12 text-center mt-5">
             <button
               className="btn btn-primary text-center mt-5"
-              onClick={() => navigate("/productos")}
+              onClick={() => navigate(-1)}
             >
-              Volver a productos
+              Volver
             </button>
           </div>
         </>
