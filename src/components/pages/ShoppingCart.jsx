@@ -41,7 +41,7 @@ export const ShoppingCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         // const newItem = modificarPrecio(product,contadorProductos)
-        navigate("/productos/metodo-pago")
+        window.open("https://www.instagram.com/tiendafornite.arg");
         
         
       } else if (result.isDismissed) {
@@ -110,7 +110,7 @@ export const ShoppingCart = () => {
               className="btn btn-warning text-center"
               onClick={() => finalizarCompra()}
             >
-              Finalizar compra
+              Finalizar compra en Instagram
             </button>
           </div>
         </>
