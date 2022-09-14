@@ -117,6 +117,14 @@ export const ShoppingCart = () => {
               Finalizar compra
             </button>
           </div>
+          <div className="col-12 text-center mt-5">
+            <button
+              className="btn btn-primary text-center mt-5"
+              onClick={() => navigate(-1)}
+            >
+              Volver
+            </button>
+          </div>
         </>
       ) : (
         <>

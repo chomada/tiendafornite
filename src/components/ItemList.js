@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 import "../index.css";
 import { Row } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const ItemList = ({ products }) => {
 
