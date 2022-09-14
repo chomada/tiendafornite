@@ -9,7 +9,7 @@ import { Badge,Text } from '@chakra-ui/react'
 
 export const ShoppingCart = () => {
   const navigate = useNavigate();
-  const { infoProduct, eliminarProducto, totalCompra, vaciarCarrito, inicioCarritoStorage } = useContext(CartContext);
+  const { infoProduct, eliminarProducto, totalCompra } = useContext(CartContext);
 
   const [total, setTotal] = useState(0);
 
