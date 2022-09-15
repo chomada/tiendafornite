@@ -41,6 +41,11 @@ const CartProvider = ({ children }) => {
     return precios.reduce((a, b) => a + b);
   };
 
+  const vaciarCarrito = ()=>{
+    setInfoProduct([])
+    localStorage.clear()
+  }
+
   const eliminarProducto = (id) => {
     const newData = infoProduct.filter((product) => product.id !== id);
     setInfoProduct(newData);
@@ -68,6 +73,7 @@ const CartProvider = ({ children }) => {
         eliminarProducto,
         totalCompra,
         inicioCarritoStorage,
+        vaciarCarrito
       }}
     >
       {children}
