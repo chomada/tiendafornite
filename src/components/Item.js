@@ -19,14 +19,13 @@ const Item = ({ products }) => {
 
   const { agregarProducto } = useContext(CartContext);
 
-  const restarProducto = (product)=>{
+  const restarProducto = ()=>{
     if(contadorProductos === 1) return
     setContadorProductos(contadorProductos - 1)
-    // let newData = 
     
   }
 
-  const sumarProducto = (product)=>{
+  const sumarProducto = ()=>{
     
     if(contadorProductos === 10) return
     setContadorProductos(contadorProductos + 1)

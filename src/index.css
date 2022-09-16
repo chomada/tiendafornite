@@ -2,11 +2,10 @@ body {
   font-family: "Montserrat", sans-serif !important;
   position: relative;
   min-height: 100vh !important;
-  padding-bottom: 170px;
+  /* height: 100vh !important; */
+  padding-bottom: 100px;
   background: linear-gradient(black, #472c4a 60%, #472c4a) !important
 }
-
-
 
 .pointer{
   cursor: pointer;
@@ -185,14 +184,14 @@ h2 {
   width: 100%;
   position: absolute;
   bottom: 0;
-  padding-top: 15px;
+  padding: 5px 0;
   color: white;
 }
 .footer-logo{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 .logo-titulo{
   margin-left: 10px;
@@ -203,7 +202,7 @@ h2 {
   justify-content: center;
 }
 .redes{
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 .instagram a{
   text-decoration: none !important;

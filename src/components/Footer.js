@@ -1,30 +1,26 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaGitlab } from "react-icons/fa";
-import InstagramIcon from '@material-ui/icons/Instagram';
-
-
-
-
+import InstagramIcon from "@material-ui/icons/Instagram";
 
 const Footer = () => {
   return (
     <footer className="footerGral">
       <Container fluid>
         <Row>
-          <Col>
-           <div className='footer-logo'>
-            <FaGitlab /><span className="logo-titulo">Tienda Fornite</span>
-           </div>
-          </Col>
-        </Row>
-        <Row className='py-3'>
-          <Col className='contenedor-redes'>
-            <div className='redes'>
+          <Col className="d-flex justify-content-center align-items-center">
+            <div className="footer-logo pe-5">
+              <FaGitlab />
+              <span className="logo-titulo">Tienda Fornite</span>
+            </div>
+            <div className="redes">
               <div>
-                
-                <div className='instagram'>
-                  <a href='https://www.instagram.com/tiendafornite.arg' target='_blank' rel="noreferrer">
+                <div className="instagram">
+                  <a
+                    href="https://www.instagram.com/tiendafornite.arg"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <InstagramIcon />
                   </a>
                 </div>
@@ -32,16 +28,33 @@ const Footer = () => {
             </div>
           </Col>
         </Row>
-        <Row className='bg-dark'>
+
+        {/* <Col className="contenedor-redes">
+          <div className="redes">
+            <div>
+              <div className="instagram">
+                <a
+                  href="https://www.instagram.com/tiendafornite.arg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <InstagramIcon />
+                </a>
+              </div>
+            </div>
+          </div>
+        </Col> */}
+
+        {/* <Row className='bg-dark'>
           <Col>
             <div className='copyright'>
               <p >Ponete en contacto con nosotros | This website is made by blabl</p>
             </div>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

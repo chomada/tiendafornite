@@ -9,17 +9,21 @@ import { Badge,Text } from '@chakra-ui/react'
 
 export const ShoppingCart = () => {
   const navigate = useNavigate();
-  const { infoProduct, eliminarProducto, totalCompra } = useContext(CartContext);
+  const { infoProduct, eliminarProducto, totalCompra, vaciarCarrito } = useContext(CartContext);
 
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
 
+    
+    // inicioCarritoStorage( JSON.parse(localStorage.getItem('productos')) || [] )
     if (infoProduct.length > 0) {
       
       setTotal(totalCompra())
     }
-    
+
+
+
 
 
   }, [infoProduct]);
@@ -97,7 +101,7 @@ export const ShoppingCart = () => {
 
           <div className="col-12 text-center mt-5">
           <Text fontWeight='bold'>
-      <Badge  >
+      <Badge>
       Total compra: {total}
       </Badge>
       
@@ -107,10 +111,25 @@ export const ShoppingCart = () => {
            
             <button
               
-              className="btn btn-warning text-center"
+              className="btn btn-warning text-center me-3 fw-bold"
               onClick={() => finalizarCompra()}
             >
               Finalizar compra
+            </button>
+            <button
+              
+              className="btn btn-danger text-center fw-bold"
+              onClick={() => vaciarCarrito()}
+            >
+              Vaciar carrito
+            </button>
+          </div>
+          <div className="col-12 text-center mt-5">
+            <button
+              className="btn btn-primary text-center mt-5"
+              onClick={() => navigate(-1)}
+            >
+              Volver
             </button>
           </div>
         </>
@@ -122,9 +141,9 @@ export const ShoppingCart = () => {
           <div className="col-12 text-center mt-5">
             <button
               className="btn btn-primary text-center mt-5"
-              onClick={() => navigate("/productos")}
+              onClick={() => navigate(-1)}
             >
-              Volver a productos
+              Volver
             </button>
           </div>
         </>
